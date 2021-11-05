@@ -41,9 +41,9 @@ model.add(LSTM(60, dropout=0.1,recurrent_dropout=0.2))
 model.add(Dense(50, activation='relu'))
 model.add(Dense(6,activation='sigmoid'))
 
-model.compile(loss="categorical_crossentropy",
+model.compile(loss="binary_crossentropy",
               optimizer="adam",
-              metrics=['categorical_accuracy'])
+              metrics=['accuracy'])
 
 # TRAINING
 batch_size = 32
